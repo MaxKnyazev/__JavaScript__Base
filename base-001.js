@@ -1,15 +1,12 @@
 /*
-Base-001.
+Base-001
 
 Дана строка из символов латинского алфавита. Написать функцию transStr(str),
 которая строчные гласные буквы делает прописными, а прописные – строчными.
-Функция должна возвратить результат.
-
-Например :
+Функция должна возвратить результат. Например :
 
 console.log(transStr(‘colOr’));    // ‘cOlor’
 console.log(transStr(‘sOrrY’));    // ‘sorry’
-
 */
 
 function transStr(str) {
@@ -38,24 +35,14 @@ function transStr(str) {
     return result;
 }
 
-
 /* ===================   the testing function   ======================= */
-
 function test (testedFunc, result, ...data) {
-    if ( testedFunc(...data) === result ) {
-        console.log('+ + + + + + +');
-        console.log(data);
-        console.log(result);
-    }else{
-        console.log('- - - - - - -');
-        console.log(data);
-        console.log(result);
-    }
+    testedFunc(...data) === result ?
+        console.log(`+ + + + + + + : ${data} --> ${result}`) :
+        console.log(`- - - - - - - : ${data} --> ${result}`);
 }
 
-
 /* ===================         tests          ======================= */
-
 test(transStr, '', '');
 test(transStr, 'colOr', 'cOlor');
 test(transStr, '  cOOOOr   alisA  ', '  coooor   AlIsa  ');

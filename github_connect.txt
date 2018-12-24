@@ -1,0 +1,10 @@
+1. Запустить Git Bahs Here.
+2. Командами cd d:\.... зайти в каталог, который будт родительским
+   для искомого каталога из Github-а
+3. Ввести команду :
+	
+	git clone git@github.com:MaxKnyazev/Accent.git
+
+4. В программе SmatrGit :
+	Repository -> Add or Create -> 
+	выбрать скопированный с github каталог проекта

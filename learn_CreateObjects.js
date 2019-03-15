@@ -5,6 +5,7 @@
 2. Функция-конструктор
 3. Object.create()
 4. Функция, возвращающая объект
+5. Конструктор Object
 
 на примере объекта : { age : 20 }
 */
@@ -16,7 +17,7 @@ let o1 = {
     age : 20
 };
 
-console.log(o1);
+console.log('o1 --> ', o1);
 
 //==============================================================================
 // 2. Функция-конструктор
@@ -26,7 +27,7 @@ let ConstrObj = function(age) {
 }
 
 let o2 = new ConstrObj(20);
-console.log(o2);
+console.log('o2 --> ', o2);
 
 //==============================================================================
 // 3. Object.create()
@@ -36,16 +37,15 @@ console.log(o2);
 
 //let o = {};  эквивалентно этому: let o = Object.create(Object.prototype);
 
- let o3 = Object.create(
-     Object.prototype,
-     { age: { value: 20,
-              writable: true,
-              enumerable: true,
-              configurable: true
-             }
-     });
+ let o3 = Object.create(Object.prototype,
+                        { age: { value: 20,
+                                writable: true,
+                                enumerable: true,
+                                configurable: true
+                        }
+                        });
 
-console.log(o3);
+console.log('o3 --> ', o3);
 
 //==============================================================================
 // 4. Функция, возвращающая объект
@@ -57,5 +57,13 @@ let constrObj = function(age) {
 }
 
 let o4 = constrObj(20);
-console.log(o4);
+console.log('o4 --> ', o4);
+
+//==============================================================================
+// 5. Конструктор Object
+
+let o5 = new Object();
+o5.age = 20;
+console.log('o5 --> ', o5);
+
 
